@@ -10,10 +10,7 @@ fi
 echo "→ Installing files in $1"
 
 echo "Installing flake.nix"
-ln -sf ./flake.nix $1/flake.nix
+cp ./flake.nix $1/flake.nix
 
 echo "Installing flake.lock"
-ln -sf ./flake.lock $1/flake.lock
-
-echo "Installing .envrc"
-cp ./envrc $1/.envrc
+cp ./flake.lock $1/flake.lock
